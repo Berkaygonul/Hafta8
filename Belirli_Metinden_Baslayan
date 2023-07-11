@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+
+void findWordsStartingWith(char* textList[], int size, char* prefix) {
+    printf("Metinden Başlayan Kelimeler: ");
+    
+    for (int i = 0; i < size; i++) {
+        if (strncmp(textList[i], prefix, strlen(prefix)) == 0)
+            printf("%s ", textList[i]);
+    }
+    
+    printf("\n");
+}
+
+int main() {
+    char* textList[] = {"apple", "banana", "apricot", "orange", "grape"};
+    int size = sizeof(textList) / sizeof(textList[0]);
+    char* prefix = "ap";
+    
+    findWordsStartingWith(textList, size, prefix);
+    
+    return 0;
+}

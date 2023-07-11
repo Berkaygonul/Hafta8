@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Bağlı liste düğüm yapısı
+
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Yeni bir düğüm oluşturur ve veriyi atar
+
 struct Node* newNode(int data) {
     struct Node* node = (struct Node*)malloc(sizeof(struct Node));
     node->data = data;
@@ -15,7 +15,7 @@ struct Node* newNode(int data) {
     return node;
 }
 
-// Bağlı listenin eleman sayısını bulan fonksiyon
+
 int countNodes(struct Node* head) {
     int count = 0;
     struct Node* current = head;

@@ -4,10 +4,10 @@ void findDuplicates(int arr[], int size) {
     printf("Tekrar Eden Elemanlar: ");
     
     for (int i = 0; i < size; i++) {
-        // Elemanın negatif hale getirilmesi
+        
         int index = abs(arr[i]);
         
-        // Eğer elemanın indeksi negatifse, tekrar eden bir elemandır
+        
         if (arr[index] >= 0)
             arr[index] = -arr[index];
         else
